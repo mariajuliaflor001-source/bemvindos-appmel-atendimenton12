@@ -1,1 +1,560 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <meta name="description" content="Conexão Material Para Construção LTDA - Materiais de construção com qualidade e os melhores preços. CNPJ: 22.819.051/0001-82. Atendimento rápido e entrega na sua obra.">
+  <meta name="keywords" content="materiais de construção, concreto, tijolos, cimento, areia, ferragens, construção civil, conexão material">
+  <meta name="author" content="Conexão Material Para Construção LTDA">
+  <title>Conexão Material Para Construção | Materiais de qualidade</title>
+  <!-- Google Fonts e ícones para um visual moderno -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f5f7fb;
+      color: #1e2a3e;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    /* container padrão */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* header / navbar */
+    .navbar {
+      background: white;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(0px);
+    }
+
+    .nav-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .logo-area h1 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #e67e22, #d35400);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      letter-spacing: -0.5px;
+    }
+
+    .logo-area p {
+      font-size: 0.8rem;
+      color: #4b6a8b;
+      font-weight: 500;
+    }
+
+    .cnpj-header {
+      background: #fef3e2;
+      padding: 8px 16px;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #b45f1b;
+    }
+
+    .cnpj-header i {
+      margin-right: 6px;
+    }
+
+    /* botão CTA */
+    .btn-primary {
+      background: linear-gradient(95deg, #e67e22, #f39c12);
+      border: none;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 1rem;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 10px rgba(230, 126, 34, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      background: linear-gradient(95deg, #d35400, #e67e22);
+      box-shadow: 0 8px 20px rgba(230, 126, 34, 0.4);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 2px solid #e67e22;
+      padding: 10px 24px;
+      border-radius: 40px;
+      font-weight: 600;
+      color: #e67e22;
+      transition: 0.2s;
+    }
+
+    .btn-secondary:hover {
+      background: #e67e22;
+      color: white;
+    }
+
+    /* hero section */
+    .hero {
+      background: linear-gradient(120deg, #ffffff 30%, #fef5e8 100%);
+      padding: 60px 0 70px;
+    }
+
+    .hero-grid {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text .badge {
+      background: #e67e2210;
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 30px;
+      color: #e67e22;
+      font-weight: 600;
+      font-size: 0.85rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-text h2 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: #1e2a3e;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      color: #2c3e50;
+      margin-bottom: 30px;
+      max-width: 90%;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .stat-item h4 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #e67e22;
+    }
+
+    .hero-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .hero-image img {
+      max-width: 100%;
+      border-radius: 32px;
+      box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      object-fit: cover;
+    }
+
+    /* seção de serviços / produtos */
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 15px;
+    }
+
+    .section-sub {
+      text-align: center;
+      color: #5a6e82;
+      margin-bottom: 50px;
+      font-size: 1.1rem;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .card {
+      background: white;
+      border-radius: 28px;
+      padding: 28px 20px;
+      text-align: center;
+      transition: 0.25s ease;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.02);
+      border: 1px solid #eee;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.1);
+      border-color: #fde6d2;
+    }
+
+    .card-icon {
+      font-size: 3rem;
+      color: #e67e22;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+    }
+
+    /* sobre */
+    .about-section {
+      background: #ffffff;
+      padding: 70px 0;
+      margin-top: 20px;
+    }
+
+    .about-flex {
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .about-text {
+      flex: 1;
+    }
+
+    .about-text h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .info-cnpj {
+      background: #f8f9fc;
+      padding: 20px;
+      border-radius: 24px;
+      margin: 25px 0;
+      border-left: 6px solid #e67e22;
+    }
+
+    .info-cnpj p {
+      font-family: monospace;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    .about-img {
+      flex: 1;
+    }
+
+    .about-img img {
+      width: 100%;
+      border-radius: 32px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+    }
+
+    /* contato / whatsapp */
+    .contact-bar {
+      background: linear-gradient(115deg, #1e2a3e, #0f1722);
+      color: white;
+      padding: 55px 0;
+      text-align: center;
+      border-radius: 48px 48px 0 0;
+      margin-top: 40px;
+    }
+
+    .contact-bar h3 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .whatsapp-btn {
+      background: #25d366;
+      padding: 14px 38px;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-top: 20px;
+      transition: 0.2s;
+      color: white;
+      text-decoration: none;
+    }
+
+    .whatsapp-btn:hover {
+      background: #1da15f;
+      transform: scale(1.02);
+    }
+
+    /* rodapé */
+    footer {
+      background: #0f1722;
+      color: #b9c7d9;
+      padding: 40px 0 25px;
+    }
+
+    .footer-flex {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .footer-col h4 {
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .footer-col p {
+      font-size: 0.9rem;
+      max-width: 260px;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #2a3748;
+      padding-top: 25px;
+      font-size: 0.8rem;
+    }
+
+    /* responsivo */
+    @media (max-width: 800px) {
+      .hero-text h2 {
+        font-size: 2.2rem;
+      }
+      .nav-flex {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-grid {
+        flex-direction: column;
+      }
+      .hero-text p {
+        max-width: 100%;
+      }
+      .btn-primary {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container">
+    <div class="nav-flex">
+      <div class="logo-area">
+        <h1>CONEXÃO MATERIAL</h1>
+        <p>Para Construção LTDA | Força e qualidade na obra</p>
+      </div>
+      <div class="cnpj-header">
+        <i class="fas fa-building"></i> CNPJ: 22.819.051/0001-82
+      </div>
+      <div>
+        <a href="#contato" class="btn-primary"><i class="fas fa-phone-alt"></i> Solicitar orçamento</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Hero principal -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <span class="badge"><i class="fas fa-hard-hat"></i> Líder em materiais de construção</span>
+        <h2>Do alicerce ao acabamento, <br> a conexão que sua obra precisa.</h2>
+        <p>Na Conexão Material Para Construção LTDA você encontra tudo em cimento, tijolos, ferragens, argamassas e muito mais. Qualidade e preço justo com entrega rápida.</p>
+        <div class="hero-stats">
+          <div class="stat-item"><h4>+350</h4><span>Produtos</span></div>
+          <div class="stat-item"><h4>+12</h4><span>Anos de mercado</span></div>
+          <div class="stat-item"><h4>98%</h4><span>Clientes satisfeitos</span></div>
+        </div>
+        <div style="margin-top: 35px;">
+          <a href="#produtos" class="btn-primary" style="background: #2c3e50; box-shadow: none;"><i class="fas fa-truck"></i> Ver catálogo</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <!-- imagem ilustrativa de construção civil (gerada via placeholder e estilizada, porém usamos uma imagem royalty-free temática) -->
+        <img src="https://placehold.co/600x450/FFF3E6/e67e22?text=Construção+Material+Conexão" alt="Materiais de construção - Conexão Material" style="background: #fbead5;">
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de produtos / serviços -->
+  <div class="container" id="produtos">
+    <div style="margin: 50px 0 10px;">
+      <h2 class="section-title">Produtos de alta performance</h2>
+      <p class="section-sub">Selecionamos os melhores fornecedores para garantir durabilidade e economia na sua obra</p>
+    </div>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-trowel"></i></div>
+        <h3>Cimento & Argamassa</h3>
+        <p>CP II, CP III, argamassas colantes e industrializadas. Para cada etapa da construção.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-dice-d6"></i></div>
+        <h3>Tijolos & Blocos</h3>
+        <p>Tijolos cerâmicos, blocos de concreto, estrutural e vedação. Alto rendimento.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-microchip"></i></div>
+        <h3>Ferragens & Metais</h3>
+        <p>Vergalhões, arames, telas soldadas, cantoneiras e acessórios para estrutura segura.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-paint-roller"></i></div>
+        <h3>Acabamento</h3>
+        <p>Tintas, pisos, revestimentos, louças e metais. Do canteiro ao décor final.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sobre + CNPJ oficial -->
+  <section class="about-section">
+    <div class="container about-flex">
+      <div class="about-text">
+        <h3><i class="fas fa-handshake" style="color:#e67e22;"></i> Quem somos</h3>
+        <p><strong>Conexão Material Para Construção LTDA</strong> nasceu com o propósito de conectar obras e profissionais da construção aos melhores materiais com preço justo e transparência. Atendemos desde pequenas reformas até grandes empreendimentos.</p>
+        <div class="info-cnpj">
+          <p><i class="fas fa-registered"></i> <strong>Razão Social:</strong> Conexao Material Para Construcao LTDA</p>
+          <p><i class="fas fa-id-card"></i> <strong>CNPJ:</strong> 22.819.051/0001-82 &nbsp;|&nbsp; 22819051000182</p>
+          <p><i class="fas fa-map-marker-alt"></i> <strong>Região de atuação:</strong> Sudeste e Centro-Oeste - entregas programadas.</p>
+        </div>
+        <p>Possuímos estrutura própria para armazenagem, frota de entrega e equipe treinada para orientar sua compra. Garantia de procedência e nota fiscal em todas as vendas.</p>
+        <a href="#contato" class="btn-secondary" style="margin-top: 20px; display: inline-block;"><i class="fas fa-envelope"></i> Fale com um especialista</a>
+      </div>
+      <div class="about-img">
+        <img src="https://placehold.co/550x400/F8F4EC/e67e22?text=Entrega+de+Materiais" alt="Entrega de materiais de construção">
+      </div>
+    </div>
+  </section>
+
+  <!-- Diferenciais extras -->
+  <div class="container">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 25px; margin: 30px 0 20px;">
+      <div style="flex:1; min-width:200px; background:white; border-radius: 32px; padding: 25px; text-align:center; box-shadow:0 5px 12px rgba(0,0,0,0.03);">
+        <i class="fas fa-truck-fast" style="font-size:2.5rem; color:#e67e22;"></i>
+        <h4 style="margin:15px 0 8px;">Entrega ágil</h4>
+        <p style="font-size:0.9rem;">Logística própria para não parar sua obra.</p>
+      </div>
+      <div style="flex:1; min-width:200px; background:white; border-radius: 32px; padding: 25px; text-align:center;">
+        <i class="fas fa-tags" style="font-size:2.5rem; color:#e67e22;"></i>
+        <h4 style="margin:15px 0 8px;">Melhor preço</h4>
+        <p style="font-size:0.9rem;">Compramos direto da indústria e repassamos economia.</p>
+      </div>
+      <div style="flex:1; min-width:200px; background:white; border-radius: 32px; padding: 25px; text-align:center;">
+        <i class="fas fa-headset" style="font-size:2.5rem; color:#e67e22;"></i>
+        <h4 style="margin:15px 0 8px;">Suporte técnico</h4>
+        <p style="font-size:0.9rem;">Engenheiros e consultores para te ajudar na escolha.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bloco de contato / WhatsApp e formulário simples (para campanha ads) -->
+  <div id="contato" class="contact-bar">
+    <div class="container">
+      <h3><i class="fab fa-whatsapp"></i> Pronto para construir com qualidade?</h3>
+      <p style="margin-bottom: 12px; max-width: 600px; margin-left: auto; margin-right: auto;">Solicite um orçamento sem compromisso. Nossa equipe retorna em até 2 horas úteis.</p>
+      <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20materiais%20de%20construção%20e%20preços." class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp fa-lg"></i> Falar no WhatsApp
+      </a>
+      <div style="margin-top: 35px; background: rgba(255,255,255,0.1); padding: 24px; border-radius: 48px; max-width: 550px; margin-left: auto; margin-right: auto;">
+        <p style="font-weight: 600; margin-bottom: 12px;"><i class="fas fa-phone-alt"></i> Ou ligue agora: (11) 4002-8922</p>
+        <p style="font-size: 0.85rem;">E-mail: contato@conexaomaterialconstrucao.com.br</p>
+        <small>CNPJ: 22.819.051/0001-82 - Conexao Material Para Construcao LTDA</small>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-flex">
+      <div class="footer-col">
+        <h4>Conexão Material</h4>
+        <p>Referência em materiais de construção, compromisso com a solidez e crescimento do seu projeto.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Informações legais</h4>
+        <p>Razão Social: Conexao Material Para Construcao LTDA</p>
+        <p>CNPJ: 22.819.051/0001-82 - Inscrição Estadual: Isento</p>
+        <p><i class="fas fa-file-invoice"></i> Nota Fiscal eletrônica garantida</p>
+      </div>
+      <div class="footer-col">
+        <h4>Atendimento</h4>
+        <p>Segunda a Sexta: 7h às 18h<br> Sábado: 8h às 13h</p>
+        <p><i class="fab fa-instagram"></i> @conexaomaterial</p>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>© 2025 Conexao Material Para Construcao LTDA - Todos os direitos reservados. | Política de Privacidade | Termos de Uso</p>
+      <p style="margin-top: 8px;">Este site é parte de campanha Google Ads e apresenta informações oficiais da empresa registrada sob CNPJ 22.819.051/0001-82</p>
+    </div>
+  </div>
+</footer>
+
+<!-- linkagem suave e conversão para clique no WhatsApp (garantia de evento básico) -->
+<script>
+  // Script simples para melhorar a interação do usuário, tracking opcional, sem dados sensíveis.
+  // Garantir que os links do botão "Solicitar orçamento" e do CTA rolem até a seção de contato
+  document.querySelectorAll('a[href^="#contato"], .btn-primary[href="#contato"]').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const contactSection = document.getElementById('contato');
+      if(contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+  // Ajuste para link "Ver catálogo" -> rolar para produtos
+  const catalogoLink = document.querySelector('a[href="#produtos"]');
+  if(catalogoLink) {
+    catalogoLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      const produtosSection = document.getElementById('produtos');
+      if(produtosSection) {
+        produtosSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
+  // qualquer clique no botão do hero que leva ao contato -> já tratado pelo seletor geral.
+  // também garantir que dados da empresa estejam explícitos no console para conformidade (apenas informativo)
+  console.log("Conexão Material Para Construção LTDA | CNPJ: 22.819.051/0001-82 - Site otimizado para Google Ads");
+</script>
+</body>
+</html>
